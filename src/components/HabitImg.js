@@ -1,14 +1,13 @@
 import { HStack, Image, Flex, useMediaQuery } from "@chakra-ui/react"
 import { MdKeyboardDoubleArrowLeft, MdKeyboardDoubleArrowRight } from "react-icons/md";
-import { ArrowLeftIcon, ArrowRightIcon } from '@chakra-ui/icons'
 import { useState } from 'react';
 
 const HabitImg = ({images, w}) => {
-	const [isIpad] = useMediaQuery(('max-width: 1024px'));
-	const [isMobile] = useMediaQuery(('max-width: 768px'));
+	const [ isIpad ] = useMediaQuery(('max-width: 1024px'));
+	const [ isMobile ] = useMediaQuery(('max-width: 768px'));
 	const len = images.length;
-	const [cur, setCur] = useState(0);
-	const [isHover, setIsHover] = useState(false);
+	const [ cur, setCur ] = useState(0);
+	const [ isHover, setIsHover ] = useState(false);
 	const previousImage = () => {
 		setCur(cur === 0 ? len - 1 : cur - 1);
 	}

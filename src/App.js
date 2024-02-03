@@ -5,6 +5,7 @@ import HomePage from "./containers/HomePage"
 import Experience from "./containers/Experience"
 import Habit from "./containers/Habit"
 import Footer from "./components/Footer"
+import Page from "./containers/Page"
 
 
 function App() {
@@ -17,9 +18,7 @@ function App() {
         {
           pages.map((item, index) => {
             return (
-              <Flex bg={index % 2 ? "blackAlpha.100" : "white"} id={item[1]}>
-                {item[0]}
-              </Flex>
+              <Page content={item[0]} bg={index % 2 ? "blackAlpha.100" : "white"} id={item[1]} />
             )
           })
         }

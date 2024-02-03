@@ -13,7 +13,15 @@ const Footer = () => {
 		[<AiFillInstagram />, "https://www.instagram.com/leolin0904/"]
 	]
 	return (
-		<Flex minW="100%" minH="10vh" flexDir="column" alignItems="center" justifyContent="center">
+		<Flex 
+		 minW="100%" 
+		 minH="10vh" 
+		 flexDir="column" 
+		 alignItems="center" 
+		 justifyContent="center" 
+		 gap={2} 
+		 mt={5}
+		>
 		  <HStack spacing={7}>
 		    {
 		      links.map((link, index) => {
@@ -23,6 +31,7 @@ const Footer = () => {
 		      })
 		    }
 		  </HStack>
+		  <Text>© Handcrafted by Cheng-Yu Lin</Text>
 		</Flex>
 	)
 }

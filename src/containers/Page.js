@@ -1,20 +1,22 @@
 import { Flex, useMediaQuery } from "@chakra-ui/react"
-import Avatar from "../components/Avatar"
-import About from "../components/About"
 
-const HomePage = () => {
+const Page = ({content, id, bg}) => {
 	const [ isMobile ] = useMediaQuery("(max-width: 768px)");
 	return (
 		<Flex 
 		 flexDir={isMobile ? "column" : "row"} 
 		 alignItems="center"
-		 justifyContent="center"
-		 gap="50px"  
+		 justifyContent="center"  
+		 w="100%"
+		 minH="100vh"
+		 pt="100px"
+		 id={id}
 		>
-		  <Avatar />
-		  <About />
+		  <Flex bg={bg}>
+		    {content}
+		  </Flex>
 		</Flex>
 	)
 }
 
-export default HomePage;
+export default Page;

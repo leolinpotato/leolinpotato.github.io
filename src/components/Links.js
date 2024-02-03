@@ -2,7 +2,7 @@ import { Link, HStack, useMediaQuery, useDisclosure,  Modal, ModalOverlay, Modal
 import { HamburgerIcon } from '@chakra-ui/icons'
 
 const Links = ({fn}) => {
-	const [isMobile] = useMediaQuery("(max-width: 768px)");
+	const [ isMobile ] = useMediaQuery("(max-width: 768px)");
 	const ScrollToPosition = (id) => {
 		const target = document.getElementById(id);
 		if (target) {
@@ -18,14 +18,15 @@ const Links = ({fn}) => {
 
 	const Mobile = 
 		<>
-		  <IconButton onClick={onOpen} icon={<HamburgerIcon w={5} h={5} />} colorScheme="blackAlpha.900"></IconButton>
+		  <IconButton onClick={onOpen} icon={<HamburgerIcon w={5} h={5} />} colorScheme="blackAlpha.900" />
 		  <Modal 
-		    isOpen={isOpen} 
-		    onClose={onClose} 
-		    zIndex="9999" 
-		    size="full"
-		    motionPreset='slideInTop'
-		    transition={{ enter: { duration: 30 } }}>
+		   isOpen={isOpen} 
+		   onClose={onClose} 
+		   zIndex="9999" 
+		   size="full"
+		   motionPreset='slideInTop'
+		   transition={{ enter: { duration: 30 } }}
+		  >
 		    <ModalOverlay />
 		    <ModalContent p={5} bg="black" color="gray.300">
 		      {

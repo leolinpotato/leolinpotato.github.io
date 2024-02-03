@@ -14,15 +14,17 @@ const Title = () => {
 
 	return (
 		<Flex 
-		  h="100px"
-		  minW="100%"
-		  justifyContent="space-between"
-		  alignItems="center"
-		  position="fixed"
-		  px="5vw"
-		  bg="blackAlpha.900"
-		  zIndex="1000"
-		  color="white">
+		 h="100px"
+		 minW="100%"
+		 justifyContent="space-between"
+		 alignItems="center"
+		 position="fixed"
+		 px="5vw"
+		 bg="blackAlpha.900"
+		 zIndex="1000"
+		 color="white"
+		 fontSize="lg"
+		>
 		  <Logo fn={ScrollToPosition}/>
 		  <Links fn={ScrollToPosition}/>
 		</Flex>
